@@ -2,30 +2,30 @@ var mwstr = {}; // init lzr namespace
 
 mwstr.errng = function () {
   var errng = this;
-  errng.mn = vec2.fromValues(50, 50); // min screen coord of bounds
-  errng.sz = vec2.fromValues(1400, 400); // screen size of bounds
+  errng.mn = vec2.fromValues(2.5, 2.5); // min screen coord of bounds
+  errng.sz = vec2.fromValues(70, 20); // screen size of bounds
   errng.mmsz = vec2.fromValues(70, 20); // millimeter size of bounds
 
   errng.wide_thrsh = Math.PI / 1.5;
 
   errng.mxattmpts = 1000; // num times to attempt to generate vertices
   errng.cll = 0.6; // ratio of generated vertices to cull
-  errng.mndst = 100; // min distance between vertices
-  errng.strt = 12; // width of struts
+  errng.mndst = 5; // min distance between vertices
+  errng.strt = 0.6; // width of struts
   errng.mn_split_brdth = errng.strt * 3.0; // min breadth to split triangle
 
-  errng.hkdst = 160.0; // top keepout (for hook) (on left)
-  errng.hkvrts = [vec2.fromValues(150, 300), vec2.fromValues(150, 200)];
+  errng.hkdst = 8.0; // top keepout (for hook) (on left)
+  errng.hkvrts = [vec2.fromValues(7.5, 15.5), vec2.fromValues(7.5, 9.5)];
   errng.hkx = [
-    vec2.fromValues(80, 220),
-    vec2.fromValues(60, 250),
-    vec2.fromValues(80, 280)];
+    vec2.fromValues(5.5, 10.5),
+    vec2.fromValues(4.5, 12.5),
+    vec2.fromValues(5.5, 14.5)];
   errng.hkvd = [ // will be offset by strut width
-    vec2.fromValues(150, 200),
-    vec2.fromValues(80, 220),
-    vec2.fromValues(60, 250),
-    vec2.fromValues(80, 280),
-    vec2.fromValues(150, 300)];
+    vec2.fromValues(7.5, 11.5),
+    vec2.fromValues(6, 11),
+    vec2.fromValues(4.5, 12.5),
+    vec2.fromValues(6, 14),
+    vec2.fromValues(7.5, 13.5)];
 
   errng.dlny = null;
   errng.pn = null;
